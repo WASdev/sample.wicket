@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!-- 
+ COPYRIGHT LICENSE: This information contains sample code provided in source code form.
+ You may copy, modify, and distribute these sample programs in any form without payment
+ to IBM for the purposes of developing, using, marketing or distributing application
+ programs conforming to the application programming interface for the operating platform
+ for which the sample code is written.
+
+ Notwithstanding anything to the contrary, IBM PROVIDES THE SAMPLE SOURCE CODE ON 
+ AN "AS IS" BASIS AND IBM DISCLAIMS ALL WARRANTIES, EXPRESS OR IMPLIED, INCLUDING,
+ BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY,
+ SATISFACTORY QUALITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, AND ANY WARRANTY OR
+ CONDITION OF NON-INFRINGEMENT. IBM SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT,
+ INCIDENTAL, SPECIAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE USE OR OPERATION OF
+ THE SAMPLE SOURCE CODE. IBM HAS NO OBLIGATION TO PROVIDE MAINTENANCE, SUPPORT,
+ UPDATES, ENHANCEMENTS OR MODIFICATIONS TO THE SAMPLE SOURCE CODE.
+
+ (C) Copyright IBM Corp. 2001, 2013.
+ All Rights Reserved. Licensed Materials - Property of IBM.
+-->
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+
+	<display-name>phonebook</display-name>
+
+	<!--
+		There are three means to configure Wickets configuration mode and they 
+		are tested in the order given.
+		
+		1) A system property: -Dwicket.configuration 
+		2) servlet specific <init-param> 
+		3) context specific <context-param>
+
+		The value might be either "development" (reloading when templates change) or 
+		"deployment". If no configuration is found, "development" is the default. -->
+
+	<filter>
+		<filter-name>wicket.phonebook</filter-name>
+		<filter-class>org.apache.wicket.protocol.http.WicketFilter</filter-class>
+		<init-param>
+			<param-name>applicationClassName</param-name>
+			<param-value>com.ibm.ws.samples.phonebook.WicketApplication</param-value>
+		</init-param>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>wicket.phonebook</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+</web-app>
