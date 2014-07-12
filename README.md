@@ -1,18 +1,18 @@
 Wicket Sample
 =============
 
-This sample project contains a simple application that uses [Apache Wicket](http://wicket.apache.org/).
+This project contains a simple application that uses [Apache Wicket](http://wicket.apache.org/).
 
-## Running Wicket
+## Running in Eclipse
 
 1. Download and install [Eclipse with the WebSphere Developer Tools](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/).
 2. Create a new Liberty Profile Server. See [step 3](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/) for details.
 3. Clone this repository.
 4. Import the sample into Eclipse using *File -> Import -> Maven -> Existing Maven Projects* option.
 5. Deploy the sample into Liberty server. Right click on the *wicket* sample and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*. 
-6. Go to: [localhost:9080/wicket](localhost:9080/wicket)
+6. Go to: [http://localhost:9080/wicket](http://localhost:9080/wicket)
 
-## Building Wicket
+## Building 
 
 The sample can be build using [Apache Maven](http://maven.apache.org/).
 
