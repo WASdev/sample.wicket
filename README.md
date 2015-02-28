@@ -20,6 +20,12 @@ The sample can be build using [Apache Maven](http://maven.apache.org/).
 $ mvn install
 ```
 
+## Deploying to Bluemix
+
+Click the button below to deploy your own copy of this application to [Bluemix](https://bluemix.net).
+
+[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/WASdev/sample.wicket.git)
+
 # Notice
 
 © Copyright IBM Corporation 2014.
