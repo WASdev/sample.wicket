@@ -12,13 +12,23 @@ This project contains a simple application that uses [Apache Wicket](http://wick
 5. Deploy the sample into Liberty server. Right click on the *wicket* sample and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*. 
 6. Go to: [http://localhost:9080/wicket](http://localhost:9080/wicket)
 
-## Building 
+## Running with Maven
 
-The sample can be build using [Apache Maven](http://maven.apache.org/).
+This project can be build with [Apache Maven](http://maven.apache.org/). The project uses [Liberty Maven Plug-in][] to automatically download and install Liberty profile runtime from the [Liberty repository](https://developer.ibm.com/wasdev/downloads/). Liberty Maven Plug-in is also used to create, configure, and run the application on the Liberty server. 
 
-```bash
-$ mvn install
-```
+Use the following steps to run the application with Maven:
+
+1. Execute full Maven build. This will cause Liberty Maven Plug-in to download and install Liberty profile server.
+    ```bash
+    $ mvn clean install
+    ```
+
+2. To run the server with the Wicket sample execute:
+    ```bash
+    $ mvn liberty:run-server
+    ```
+
+Once the server is running, the application will be available under [http://localhost:9080/wicket](http://localhost:9080/wicket).
 
 ## Deploying to Bluemix
 
@@ -45,3 +55,6 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 ````
+
+[Liberty Maven Plug-in]: https://github.com/WASdev/ci.maven
+
